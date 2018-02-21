@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://tempuri.org/" elementFormDefault="qualified" targetNamespace="http://tempuri.org/" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="http://localhost:25195/UsuarioService.svc?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/MetroCard.Service.Dominio" />
+  <xs:import schemaLocation="http://localhost:25195/UsuarioService.svc?xsd=xsd3" namespace="http://schemas.datacontract.org/2004/07/MetroCard.Service.Response" />
+  <xs:element name="RegistrarUsuario">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q1="http://schemas.datacontract.org/2004/07/MetroCard.Service.Dominio" minOccurs="0" name="usuario" nillable="true" type="q1:Usuario" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="RegistrarUsuarioResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q2="http://schemas.datacontract.org/2004/07/MetroCard.Service.Response" minOccurs="0" name="RegistrarUsuarioResult" nillable="true" type="q2:UsuarioResponse" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ObtenerUsuario">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q3="http://schemas.datacontract.org/2004/07/MetroCard.Service.Dominio" minOccurs="0" name="Usuario" nillable="true" type="q3:Usuario" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ObtenerUsuarioResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q4="http://schemas.datacontract.org/2004/07/MetroCard.Service.Response" minOccurs="0" name="ObtenerUsuarioResult" nillable="true" type="q4:UsuarioResponse" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="RegistrarTarjetaUsuario">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q5="http://schemas.datacontract.org/2004/07/MetroCard.Service.Dominio" minOccurs="0" name="Tarjeta" nillable="true" type="q5:Tarjeta" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="RegistrarTarjetaUsuarioResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q6="http://schemas.datacontract.org/2004/07/MetroCard.Service.Response" minOccurs="0" name="RegistrarTarjetaUsuarioResult" nillable="true" type="q6:UsuarioResponse" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ListarTarjetaUsuario">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q7="http://schemas.datacontract.org/2004/07/MetroCard.Service.Dominio" minOccurs="0" name="Usuario" nillable="true" type="q7:Usuario" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ListarTarjetaUsuarioResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q8="http://schemas.datacontract.org/2004/07/MetroCard.Service.Dominio" minOccurs="0" name="ListarTarjetaUsuarioResult" nillable="true" type="q8:ArrayOfTarjeta" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ListarTarjetaMovimientoUsuario">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q9="http://schemas.datacontract.org/2004/07/MetroCard.Service.Dominio" minOccurs="0" name="Tarjeta" nillable="true" type="q9:Tarjeta" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ListarTarjetaMovimientoUsuarioResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q10="http://schemas.datacontract.org/2004/07/MetroCard.Service.Dominio" minOccurs="0" name="ListarTarjetaMovimientoUsuarioResult" nillable="true" type="q10:ArrayOfMovimiento" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

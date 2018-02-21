@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://tempuri.org/" elementFormDefault="qualified" targetNamespace="http://tempuri.org/" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="http://localhost:25195/PagoService.svc?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/MetroCard.Service.Dominio" />
+  <xs:import schemaLocation="http://localhost:25195/PagoService.svc?xsd=xsd3" namespace="http://schemas.datacontract.org/2004/07/MetroCard.Service.Response" />
+  <xs:element name="RecargarTarjeta">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q1="http://schemas.datacontract.org/2004/07/MetroCard.Service.Dominio" minOccurs="0" name="Tarjeta" nillable="true" type="q1:Tarjeta" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="RecargarTarjetaResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q2="http://schemas.datacontract.org/2004/07/MetroCard.Service.Response" minOccurs="0" name="RecargarTarjetaResult" nillable="true" type="q2:TarjetaResponse" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="DescontarTarjeta">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q3="http://schemas.datacontract.org/2004/07/MetroCard.Service.Dominio" minOccurs="0" name="Tarjeta" nillable="true" type="q3:Tarjeta" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="DescontarTarjetaResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q4="http://schemas.datacontract.org/2004/07/MetroCard.Service.Response" minOccurs="0" name="DescontarTarjetaResult" nillable="true" type="q4:TarjetaResponse" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>
