@@ -51,7 +51,7 @@ namespace MetroCard.Presentacion
 
                     WSUsuario.UsuarioResponse objUsuarioTarjeta = proxy.RegistrarTarjetaUsuario(objTarjeta);
                     Session["idusuario"] = objUsuarioResponse.Usuario.IdUsuario;
-
+                        //Enviar a cola 
                     var iromMq = IronSharp.IronMQ.Client.New(new IronClientConfig { ProjectId = "5a7bb9b0c85cba0009ca8dd2", Token = "zXvLUZqzULL4SSp5G3qa", Host = "mq-aws-eu-west-1-1.iron.io", Scheme = "http", Port = 80 });
 
                     QueueClient queue = iromMq.Queue("Tarjeta");
@@ -62,10 +62,6 @@ namespace MetroCard.Presentacion
                 }
             }
         }
-        //else
-        //{
-        //    Response.Redirect("RegistrarUsuario.aspx");
-        //}
 
 
         bool ValidarTarjeta(string codigo)
